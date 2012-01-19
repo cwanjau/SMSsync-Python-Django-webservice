@@ -1,0 +1,113 @@
+/*
+ * css styling adapted from
+ * http://woork.blogspot.com/2008/06/clean-and-pure-css-form-design.html
+ */
+
+body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	}
+	p, h1, form, button{border:0; margin:0; padding:0;}
+	
+	footer{text-align: center;}
+	
+	
+	.spacer{clear:both; height:1px;}
+	/* ----------- My Form ----------- */
+	.myform{
+	margin:0 auto;
+	width:460px;
+	padding:14px;
+	}
+	
+	
+	/* ----------- stylized ----------- */
+	#stylized{
+	border:solid 2px #1DD300;
+	background:#52E93A;
+	}
+	#stylized h1 {
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:8px;
+	}
+	
+	#stylized h2 {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:8px;
+	}
+	
+	#stylized p{
+	font-size:11px;
+	color:#000;
+	margin-bottom:20px;
+	/*border-bottom:solid 1px #b7ddf2;*/
+	padding-bottom:10px;
+	}
+	#stylized label{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:200px;
+	float:left;
+	}
+	#stylized .small{
+	color:#000;
+	display:block;
+	font-size:11px;
+	font-weight:normal;
+	text-align:right;
+	width:200px;
+	}
+	#stylized input{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #138900;
+	width:200px;
+	margin:2px 0 20px 10px;
+	}
+	
+	
+	#stylized .disp{
+	float:left;
+	font-size:12px;
+	padding-bottom: 2px;
+	width:200px;
+	margin:2px 0 10px 10px;
+	}
+	
+	#stylized button{
+	clear:both;
+	margin-left:150px;
+	width:125px;
+	height:31px;
+	background:#666666;
+	text-align:center;
+	line-height:31px;
+	color:#FFFFFF;
+	font-size:11px;
+	font-weight:bold;
+	}
+	
+	#stylized text{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:200px;
+	float:left;
+	}
+	
+	#stylized #error {
+	color:red;
+	font-size:12px;
+	display:none;
+	text-align: center;
+	margin-top: 5px;
+	}
+	
+	.needsfilled {
+	background:red;
+	color:white;
+	}

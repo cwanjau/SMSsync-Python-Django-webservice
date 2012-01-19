@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>SMSsync test</title>
+    
+    <link rel="stylesheet" type="text/css" href="/media/style.css" />
+ 	<script type="text/javascript" src="/media/jquery-1.3.2.js"></script>
+ 	
+ 	<script type="text/javascript" charset="utf-8">
+		 $(document).ready(function(){
+		 	
+			required = ["from", "message", "message_id", "secret"];
+			errornotice = $("#error");
+			
+			emptyerror = "Please fill out this field.";
+		
+			$("#form").submit(function(){	
+				
+				for (i=0;i<required.length;i++) {
+					var input = $('#'+required[i]);
+					if ((input.val() == "") || (input.val() == emptyerror)) {
+						input.addClass("needsfilled");
+						input.val(emptyerror);
+						errornotice.fadeIn(750);
+					} else {
+						input.removeClass("needsfilled");
+					}
+				}
+		
+				
+				if ($(":input").hasClass("needsfilled")) {
+					return false;
+				} else {
+					errornotice.hide();
+					return true;
+				}
+			});
+			
+			
+			$(":input").focus(function(){		
+			   if ($(this).hasClass("needsfilled") ) {
+					$(this).val("");
+					$(this).removeClass("needsfilled");
+			   }
+			});
+		});	
+	 </script>
+    
+</head>
+<body>
+
+    <div id="stylized" class="myform">
+		<form id="form" name="form" method="post" action="/sms">
+		<h1>SMSsync test</h1>
+		<p>Input the details below to test your response from the server</p>
+		
+		<p id="error">There were errors on the form, please make sure all fields are fill out correctly.</p>
+		
+		<label>From
+		<span class="small">The number that sent the SMS</span>
+		</label>
+		<input type="text" name="from" id="from" />
+		
+		<label>Message
+		<span class="small">The SMS sent</span>
+		</label>
+		<input type="text" name="message" id="message" />
+		
+		<label>Message Id
+		<span class="small">The unique ID of the SMS</span>
+		</label>
+		<input type="text" name="message_id" id="message_id" />
+		
+		<label>Sent to
+		<span class="small"> Number of phone running the smssync gateway</span>
+		</label>
+		<div class = "disp"><h2>+254722123456</h2></div>	
+		
+		<label>Secret
+		<span class="small">The secret key set on the app</span>
+		</label>
+		<input type="text" name="secret" id="secret" />
+		
+		<label>Timestamp
+		<span class="small">The current date and time</span>
+		</label>
+		<div class = "disp"><h2>{% now "jS F Y H:i" %}</h2></div>
+		
+		<input type="hidden" name="sent_to" value="+254722123456">
+		<input type="hidden" name="sent_timestamp" value="{% now "jS F Y H:i" %}">
+		
+		<button type="submit" onclick="checkForm(this.form)">Submit</button>
+		<div class="spacer"></div>
+		
+		</form>
+	</div>
+		
+		<footer>
+			<p>&copy; Developed by Caine Wanjau <a href="mailto:caine@faidika.co.ke?subject=smssync">Email</a></p>
+    	</footer>  
+</body>
+</html>
