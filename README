@@ -2,7 +2,7 @@
 name: Python/Django SMSSync webservice
 website: smssync.ushahidi.com
 description:A sample Python/Django application to demonstrate how to write a webservice to successfully communicate with SMSSync.
-version: 1.01
+version: 1.11
 requires: Python 2.7.2 and Django 1.3.1 
 author : Caine Wanjau caine@faidika.co.ke
 
