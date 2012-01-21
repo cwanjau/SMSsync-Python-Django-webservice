@@ -24,6 +24,6 @@ $ pyhton manage.py runserver
 5: Fill in the data as appropriate and sumbit your form. If the data has been submitted correctly you will get the following response:
 {"payload": {"success": "true"}}
 
-6: When using the webservice from the SMSsync Gateway, set your callback URL to <<http://yourdomain.com/sms>>
+6: When using the webservice from the SMSsync Gateway, set your callback URL to http:// yourdomain.com/sms
 
 All messages that are sent are logged in a text file. To view the messages, point your browser to yourdomain.com/media/log.txt
